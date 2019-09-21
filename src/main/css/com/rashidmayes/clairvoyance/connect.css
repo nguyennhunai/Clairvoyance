@@ -2,11 +2,18 @@ root {
     display: block;
 }
 .root {
-	-fx-background-color: #c31618;
+	-fx-background-color: #ffffff;
+    -fx-background-position: center center;
+    -fx-background-image: url("vincity_dream-1.png");
+    -fx-background-repeat: stretch;
+    -fx-background-attachment: fixed;
+    -fx-background-size: cover;
 }
 .label {
-    -fx-font-size: 12.0px;
+    -fx-font-size: 14.0px;
     -fx-text-fill: #ffffff;
+    -fx-font-weight: bold;
+    -fx-text-fill: BLACK;
 }
 .text-inpust {
 	-fx-border-radius: 0.0 0.0 0.0 0.0;

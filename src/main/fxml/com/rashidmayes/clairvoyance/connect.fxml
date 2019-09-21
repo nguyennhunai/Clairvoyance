@@ -11,19 +11,19 @@
 
 <GridPane fx:controller="com.rashidmayes.clairvoyance.ConnectController"
 	xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10"
-	styleClass="root">
+	styleClass="root" gridLinesVisible="true">
 	<padding>
 		<Insets top="25" right="25" bottom="25" left="25" />
 	</padding>
 
 	<ImageView GridPane.columnIndex="0" GridPane.rowIndex="0"
-		GridPane.columnSpan="2"  fitHeight="300" fitWidth="250" preserveRatio="true">
+		GridPane.columnSpan="2"  fitHeight="300" fitWidth="250" preserveRatio="true" >
 		<image>
-			<Image url="@splash.png" />
+			<Image url="@cenhome-logo.png"/>
 		</image>
 	</ImageView>
 
-	<Label text="Host" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+	<Label text="Host" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
 
 	<TextField fx:id="host" GridPane.columnIndex="1" GridPane.rowIndex="1" text=""/>
 

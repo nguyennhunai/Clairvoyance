@@ -30,8 +30,7 @@ import javafx.stage.Screen;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
 
-public class App extends Application
-{
+public class App extends Application {
 	public static final Logger APP_LOGGER = Logger.getLogger("app");
 	static final ThreadGroup SCANS = new ThreadGroup("scans");
 	static final ThreadGroup LOADS = new ThreadGroup("loads");
@@ -98,10 +97,8 @@ public class App extends Application
 	}
 	
 	public static List<SetInfo> getSetInfo(Node node, String namespace) {
-		
 		List<SetInfo> sets = new ArrayList<SetInfo>();
 		SetInfo setInfo;
-		
 		Map<String, String> map;
 		for ( String set : StringUtils.split(Info.request(null, node, "sets/" + namespace), ";") ) {
 			map = MapHelper.map(set, ":");
@@ -172,12 +169,12 @@ public class App extends Application
          });
     	
         Rectangle2D primaryScreenBounds = Screen.getPrimary().getVisualBounds();
-        stage.setTitle("Clairvoyance");
-        stage.setX(primaryScreenBounds.getMinX());
-        stage.setY(primaryScreenBounds.getMinY());
-        stage.setWidth(primaryScreenBounds.getWidth());
-        stage.setHeight(primaryScreenBounds.getHeight());
-        stage.getIcons().add(new Image(getClass().getClassLoader().getResourceAsStream("icon.png")));
+        stage.setTitle("Hệ thống Aerospike");
+        stage.setX(primaryScreenBounds.getMinX() / 2);
+        stage.setY(primaryScreenBounds.getMinY() / 2);
+        stage.setWidth(primaryScreenBounds.getWidth() / 2);
+        stage.setHeight(primaryScreenBounds.getHeight() / 2);
+        stage.getIcons().add(new Image(getClass().getClassLoader().getResourceAsStream("logo.png")));
         
         Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("connect.fxml"));
         Scene scene = new Scene(root);
